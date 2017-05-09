@@ -1,4 +1,4 @@
-package hello;
+package com.ai.service;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RepositoryRestResource(collectionResourceRel = "animal", path = "animal")
-public interface AnimalRepository extends CrudRepository<Animal, Long> {
+@RepositoryRestResource(path = "product")
+public interface ProductRepository extends CrudRepository<Product, Long> {
 
-	List<Animal> findByType(@Param("type") String type);
+	List<User> findByProductName(@Param("productName") String productName);
 
 }

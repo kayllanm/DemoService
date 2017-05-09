@@ -1,4 +1,4 @@
-package hello;
+package com.ai.service;
 
 import java.util.List;
 
@@ -8,11 +8,9 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RepositoryRestResource(path = "people")
-public interface PersonRepository extends CrudRepository<Person, Long> {
+@RepositoryRestResource(path = "user")
+public interface UserRepository extends CrudRepository<User, Long> {
 
-	List<Person> findByLastName(@Param("lastname") String lastName);
+	List<User> findByUserName(@Param("userName") String userName);
 
 }
-
-
